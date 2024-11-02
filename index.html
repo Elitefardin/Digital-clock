@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fardin watch</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: transparent; 
+      overflow: hidden; 
+    }
+
+    .clock {
+      background-color: #928d8d;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(46, 156, 105, 0.1);
+      text-align: center;
+      z-index: 1; 
+      position: relative; 
+    }
+
+    #time {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    #date {
+      font-size: 1.2rem;
+      color: #393c3f;
+    }
+    
+    #username { 
+      font-size: 1rem;
+      margin-top: 5px; 
+      text-align: left; 
+      position: absolute; 
+      bottom: 10px; 
+      left: 10px; 
+      color: rgb(179, 34, 34); /*  কালো রঙ সেট করুন */
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #100b16; 
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      transition: all .3s;
+      z-index: 0; 
+    }
+  </style>
+  <script src="var pJS=function(e,t){var a=document.querySelector("#"+e+"> .particles-js-canvas-el");this.pJS={canvas:{el:a,w:a.offsetWidth,h:a.offsetHeight},particles:{number:{value:400,density:{enable:!0,value_area:800}},color:{value:"#fff"},shape:{type:"circle",stroke:{width:0,color:"#ff0000"},polygon:{nb_sides:5},image:{src:"",width:100,height:100}},opacity:{value:1,random:!1,anim:{enable:!1,speed:2,opacity_min:0,sync:!1}},size:{value:20,random:!1,anim:{enable:!1,speed:20,size_min:0,sync:!1}},line_linked:{enable:!0,distance:100,color:"#fff",opacity:1,width:1},move:{enable:!0,speed:2,direction:"none",random:!1,straight:!1,out_mode:"out",bounce:!1,attract:{enable:!1,rotateX:3e3,rotateY:3e3}},array:[]},interactivity:{detect_on:"canvas",events:{onhover:{enable:!0,mode:"grab"},onclick:{enable:!0,mode:"push"},resize:!0},modes:{grab:{distance:100,line_linked:{opacity:1}},bubble:{distance:200,size:80,duration:.4},repulse:{distance:200,duration:.4},push:{particles_nb:4},remove:{particles_nb:2}},mouse:{}},retina_detect:!1,fn:{interact:{},modes:{},vendors:{}},tmp:{}};var m=this.pJS;t&&Object.deepExtend(m,t),m.tmp.obj={size_value:m.particles.size.value,size_anim_speed:m.particles.size.anim.speed,move_speed:m.particles.move.speed,line_linked_distance:m.particles.line_linked.distance,line_linked_width:m.particles.line_linked.width,mode_grab_distance:m.interactivity.modes.grab.distance,mode_bubble_distance:m.interactivity.modes.bubble.distance,mode_bubble_size:m.interactivity.modes.bubble.size,mode_repulse_distance:m.interactivity.modes.repulse.distance},m.fn.retinaInit=function(){m.retina_detect&&1<window.devicePixelRatio?(m.canvas.pxratio=window.devicePixelRatio,m.tmp.retina=!0):(m.canvas.pxratio=1,m.tmp.retina=!1),m.canvas.w=m.canvas.el.offsetWidth*m.canvas.pxratio,m.canvas.h=m.canvas.el.offsetHeight*m.canvas.pxratio,m.particles.size.value=m.tmp.obj.size_value*m.canvas.pxratio,m.particles.size.anim.speed=m.tmp.obj.size_anim_speed*m.canvas.pxratio,m.particles.move.speed=m.tmp.obj.move_speed*m.canvas.pxratio,m.particles.line_linked.distance=m.tmp.obj.line_linked_distance*m.canvas.pxratio,m.interactivity.modes.grab.distance=m.tmp.obj.mode_grab_distance*m.canvas.pxratio,m.interactivity.modes.bubble.distance=m.tmp.obj.mode_bubble_distance*m.canvas.pxratio,m.particles.line_linked.width=m.tmp.obj.line_linked_width*m.canvas.pxratio,m.interactivity.modes.bubble.size=m.tmp.obj.mode_bubble_size*m.canvas.pxratio,m.interactivity.modes.repulse.distance=m.tmp.obj.mode_repulse_distance*m.canvas.pxratio},m.fn.canvasInit=function(){m.canvas.ctx=m.canvas.el.getContext("2d")},m.fn.canvasSize=function(){m.canvas.el.width=m.canvas.w,m.canvas.el.height=m.canvas.h,m&&m.interactivity.events.resize&&window.addEventListener("resize",function(){m.canvas.w=m.canvas.el.offsetWidth,m.canvas.h=m.canvas.el.offsetHeight,m.tmp.retina&&(m.canvas.w*=m.canvas.pxratio,m.canvas.h*=m.canvas.pxratio),m.canvas.el.width=m.canvas.w,m.canvas.el.height=m.canvas.h,m.particles.move.enable||(m.fn.particlesEmpty(),m.fn.particlesCreate(),m.fn.particlesDraw(),m.fn.vendors.densityAutoParticles()),m.fn.vendors.densityAutoParticles()})},m.fn.canvasPaint=function(){m.canvas.ctx.fillRect(0,0,m.canvas.w,m.canvas.h)},m.fn.canvasClear=function(){m.canvas.ctx.clearRect(0,0,m.canvas.w,m.canvas.h)},m.fn.particle=function(e,t,a){this.radius=(m.particles.size.random?Math.random():1)*m.particles.size.value,m.particles.size.anim.enable&&(this.size_status=!1,this.vs=m.particles.size.anim.speed/100,m.particles.size.anim.sync||(this.vs=this.vs*Math.random())),this.x=a?a.x:Math.random()*m.canvas.w,this.y=a?a.y:Math.random()*m.canvas.h,this.x>m.canvas.w-2*this.radius?this.x=this.x-this.radius:this.x<2*this.radius&&(this.x=this.x+this.radius),this.y>m.canvas.h-2*this.radius?this.y=this.y-this.radius:this.y<2*this.radius&&(this.y=this.y+this.radius),m.particles.move.bounce&&m.fn.vendors.checkOverlap(this,a),this.color={},"object"==typeof e.value?e.value instanceof Array?(i=e.value[Math.floor(Math.random()*m.particles.color.value.length)],this.color.rgb=hexToRgb(i)):null!=e.value.r&&null!=e.value.g&&null!=e.value.b?(this.color.rgb={r:e.value.r,g:e.value.g,b:e.value.b}):null!=e.value.h&&null!=e.value.s&&null!=e.value.l&&(this.color.hsl={h:e.value.h,s:e.value.s,l:e.value.l}):"random"==e.value?this.color.rgb={r:Math.floor(256*Math.random())+0,g:Math.floor(256*Math.random())+0,b:Math.floor(256*Math.random())+0}:"string"==typeof e.value&&(this.color=e"></script> 
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div class="clock">
+    <p id="date"></p>
+    <p id="time"></p>
+    <p id="username"></p>
+  </div>
+
+  <script>
+    const WEEK = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+    
+    function updateTime() {
+      var now = new Date();
+
+      document.getElementById("time").innerText =
+        zeroPadding(now.getHours(), 2) + ":" +
+        zeroPadding(now.getMinutes(), 2) + ":" +
+        zeroPadding(now.getSeconds(), 2);
+
+      document.getElementById("date").innerText =
+        now.getFullYear() + "-" +
+        zeroPadding(now.getMonth() + 1, 2) + "-" +
+        zeroPadding(now.getDate(), 2) + " " +
+        WEEK[now.getDay()];
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000); 
+
+    function zeroPadding(num, digit) {
+      return String(num).padStart(digit, '0');
+    }
+
+    particlesJS("particles-js", {
+      // ... (আগের particles.js configuration) ...
+    });
+  </script>
+
+</body>
+</html>
